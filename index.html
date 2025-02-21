@@ -13,17 +13,19 @@
         overflow: hidden;
     }
     #container{
-        height: 40.625rem;
+        height: 100vh;
         width: 100%;
     }
     #container img{
         height: 100%;
         width: 100%;
+        object-fit: cover;
+        object-position: center;
     }
     .contain{
         height: 3.125rem;
         width: 100%;
-        margin-top: -40.625rem;
+        margin-top: -20.625rem;
         padding: 1.25rem .625rem;
         display: flex;
         justify-content: space-around;
@@ -52,9 +54,12 @@
         padding: 0.1875rem 1.25rem;
         background-color: rgb(231, 21, 63);
         border-radius: 0.5rem;
+        width: 6rem; 
+        display: inline-block;
+        text-align: center;
     }
     .reg a:hover{
-        background-color: yellowgreen;
+        background-color:green;
         color: white;
     }
     #box{
@@ -88,6 +93,8 @@
     }
     @media (max-width:2700px){
         #container{
+            object-fit: cover;
+            object-position: center;
             height: 1500px;
         }
         .contain{
@@ -118,7 +125,7 @@
     }
     @media (max-width:2560px){
         #container{
-            height: 86rem;
+            height: 88rem;
         }
         .contain{
             height: 5.125rem;
@@ -149,11 +156,8 @@
         }
     }
     @media (max-width:1750px){
-        #container{
-            object-position: center;
-        }
         .contain{
-            margin-top: -86.625rem;
+            margin-top: -83rem;
         }
         .logo{
             font-size: 2rem;
@@ -177,21 +181,18 @@
         }  
     }
     @media (max-width:1440px){
-        #container{
-            object-position: center;
-        }
         .contain{
-            margin-top: -86.625rem;
+            margin-top: -87rem;
         }
         .logo{
-            font-size: 1.7rem;
+            font-size: 2rem;
         }
         .nav-bar a{
-            font-size: 1rem;
+            font-size: 1.3rem;
             padding: .75rem 1.5625rem;
         }
         .reg a{
-            font-size: 1rem;
+            font-size: 1.5rem;
         }
         #box h5{
             margin-top: 9.375rem;
@@ -201,12 +202,13 @@
             font-size: 2rem;
         }
         #box a{
-            font-size: 1rem;
+            font-size: 1.3rem;
         }  
     }
     @media (max-width:1024px){
         #container{
             height: 37.5rem;
+            object-position: center;
         }
         .contain{
             margin-top: -37.625rem;
@@ -364,6 +366,7 @@
         .logo{
             font-size: .5rem;
             padding-top: .5rem;
+            line-height: 1.5rem;
         }
         .nav-bar a{
             font-size: .375rem;
@@ -409,6 +412,7 @@
             <h1>INTERNATIONAL TRAVEL <br> AGENCY</h1>
             <a href="#">Book Your Trip </a>
         </div>
-    </div>    
+    </div> 
+    <script src="index.js"></script>
 </body>
 </html>
