@@ -10,11 +10,12 @@
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-        overflow: hidden;
+        scroll-behavior: smooth;
     }
     #container{
-        height: 100vh;
+        height: 630px;
         width: 100%;
+        margin: auto;
     }
     #container img{
         height: 100%;
@@ -25,7 +26,7 @@
     .contain{
         height: 3.125rem;
         width: 100%;
-        margin-top: -20.625rem;
+        margin-top: -38.625rem;
         padding: 1.25rem .625rem;
         display: flex;
         justify-content: space-around;
@@ -58,10 +59,7 @@
         display: inline-block;
         text-align: center;
     }
-    .reg a:hover{
-        background-color:green;
-        color: white;
-    }
+
     #box{
         position: relative;
         text-align: center;
@@ -91,32 +89,149 @@
     #box a:hover{
         background-color: orangered;
     }
+    #about-div{
+        height: 300px;
+        background-color: rgb(165, 197, 225);
+        padding: 10px 0;
+    }
+    .about{
+        position: relative;
+        width: 70%;
+        margin: auto;
+    }
+    .about h1{
+        text-align: center;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .about p{
+        text-align: center;
+        font-size: 20px;
+        line-height: 1.5;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #service-div{
+        height: auto;
+        background-color: rgb(210, 229, 245);
+        padding: 10px 0;
+    }
+    .services{
+        width: 70%;
+        margin: auto;
+    }
+    .services h1{
+        text-align: center;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .service-section h2{
+        position: relative;
+        left: 15%;
+        font-size: 25px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .service-section li{
+        position: relative;
+        left: 17%;
+        font-size: 20px;
+        line-height: 1.5;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .hillstation{
+        width: 70%;
+        margin: auto;
+    }
+    .hillstation h1{
+        text-align: center;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .state-section h2{
+        position: relative;
+        left: 15%;
+        font-size: 25px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .state-section li{
+        position: relative;
+        left: 17%;
+        font-size: 20px;
+        line-height: 1.5;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #contact-div{
+        height: auto;
+        width: 100%;
+        background-color: rgb(210, 229, 245);
+    }
+    #contact-div h1{
+        text-align: center;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .contact-container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .contact-container h2{
+        text-align: center;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    label {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    input, textarea, button {
+        padding: 10px;
+        margin-top: 5px;
+        border: 2px solid black;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+    button {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+    button:hover {
+        background-color: #111;
+    }
     @media (max-width:2700px){
         #container{
-            object-fit: cover;
-            object-position: center;
-            height: 1500px;
+            height: 830px;
         }
         .contain{
-            height: 5.125rem;
-            margin-top: -90.625rem;
+            margin-top: -48.625rem;
         }
         .logo{
-            font-size: 4.5rem;
+            font-size: 4rem;
         }
         .nav-bar a{
-            font-size: 2.6rem;
+            font-size: 2rem;
             padding: .9375rem 2.875rem;
         }
         .reg a{
-            font-size: 2.4rem;
+            font-size: 2.1rem;
         }
         #box h5{
-            margin-top: 300px;
+            margin-top: 200px;
             font-size: 2rem;
         }
         #box h1{        
-            font-size: 4rem;
+            font-size: 3rem;
         }
         #box a{
             font-size: 2rem;
@@ -125,26 +240,26 @@
     }
     @media (max-width:2560px){
         #container{
-            height: 88rem;
+            height: 800px;
         }
         .contain{
             height: 5.125rem;
-            margin-top: -82.625rem;
+            margin-top: -48.625rem;
         }
         .logo{
-            font-size: 4.125rem;
+            font-size: 4rem;
         }
         .nav-bar a{
             text-decoration: none;
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: white;
             padding: .9375rem 1.875rem;
         }
         .reg a{
-            font-size: 2.2rem;
+            font-size: 2.1rem;
         }
         #box h5{
-            margin-top: 300px;
+            margin-top: 200px;
             font-size: 2rem;
         }
         #box h1{        
@@ -157,7 +272,7 @@
     }
     @media (max-width:1750px){
         .contain{
-            margin-top: -83rem;
+            margin-top: -50.625rem;
         }
         .logo{
             font-size: 2rem;
@@ -182,7 +297,7 @@
     }
     @media (max-width:1440px){
         .contain{
-            margin-top: -87rem;
+            margin-top: -50.625rem;
         }
         .logo{
             font-size: 2rem;
@@ -211,7 +326,8 @@
             object-position: center;
         }
         .contain{
-            margin-top: -37.625rem;
+            margin-top: -38.625rem;
+
         }
         .logo{
             font-size: 1.5rem;        
@@ -222,6 +338,7 @@
         }
         .reg a{
             font-size: .9rem;
+            width: 50px;
         }
         #box h5{
             margin-top: 6.5rem;
@@ -252,6 +369,7 @@
         }
         .reg a{
             font-size: .7rem;
+            width: 40px;
         }
         #box h5{
             margin-top: 5rem;
@@ -398,21 +516,143 @@
             </div>
             <div class="nav-bar">
                 <a href="#">Home</a>
-                <a href="#">Hill Stations</a>
-                <a href="#">Best Offer's</a>
-                <a href="#">Our Sites</a>
-                <a href="#">Contact</a>
+                <a href="#about">about</a>
+                <a href="#services">services</a>
+                <a href="#hillstation">Hill Stations</a>
+                <a href="#contact">Contact</a>
             </div>
             <div class="reg">
-                <a href="#">Register</a>
+                <a href="#">Login</a>
             </div>
         </div>
         <div id="box">
             <h5>Enjoy</h5>
-            <h1>INTERNATIONAL TRAVEL <br> AGENCY</h1>
-            <a href="#">Book Your Trip </a>
+            <h1>GLOBEL TRAVEL <br> AGENCY</h1>
+            <a href="trip-book.html" target="_self">Book Your Trip </a>
         </div>
-    </div> 
+    </div>
+    <section class="about" id="about">
+        <h1>About Us</h1>
+            <p>At Globel Travel Agency, we believe that every journey should be unforgettable. 
+                With a passion for exploration and a commitment to exceptional service, we specialize in creating personalized travel experiences tailored to your dreams. 
+                Whether you’re seeking a relaxing beach getaway, an adventurous trek, or a cultural city tour, 
+                our expert team is dedicated to turning your travel ideas into reality.
+                With years of industry expertise and a global network of trusted partners, we ensure seamless planning, exclusive deals, and memorable moments. 
+                From flights and accommodations to guided tours and unique experiences, we handle every detail, so you can focus on making memories.
+                Let Globel Travel Agency be your guide to the world. Your next adventure starts here!
+            </p>
+    </section> 
+    <div id="service-div">
+        <section class="services" id="services">
+            <h1>Our Services</h1>
+            <div class="service-section">
+                <h2> Travel Planning & Booking</h2>
+                <ul>
+                    <li>Flight Reservations</li>
+                    <li>Hotel & Resort Bookings</li>
+                    <li>Cruise Packages</li>
+                    <li>Car Rentals & Airport Transfers</li>
+                    <li>Train & Ferry Tickets</li>
+                </ul>
+            </div>
+        
+            <div class="service-section">
+                <h2> Vacation Packages</h2>
+                <ul>
+                    <li>All-Inclusive Getaways</li>
+                    <li>Honeymoon & Romantic Escapes</li>
+                    <li>Family Holidays</li>
+                    <li>Adventure & Eco-Tours</li>
+                    <li>Luxury & VIP Experiences</li>
+                </ul>
+            </div>
+        
+            <div class="service-section">
+                <h2> Specialized Tours</h2>
+                <ul>
+                    <li>Cultural & Heritage Tours</li>
+                    <li>Wildlife Safaris</li>
+                    <li>Culinary & Wine Tours</li>
+                    <li>Wellness Retreats (Yoga, Spa, etc.)</li>
+                    <li>Religious & Pilgrimage Tours</li>
+                </ul>
+            </div>
+        
+            <div class="service-section">
+                <h2> Custom Travel Solutions</h2>
+                <ul>
+                    <li>Tailor-Made Itineraries</li>
+                    <li>Solo & Group Travel Packages</li>
+                    <li>Destination Weddings & Event Planning</li>
+                    <li>Corporate & Business Travel</li>
+                    <li>Educational & Student Tours</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <section class="hillstation" id="hillstation">
+        <h1>Hill Station In India</h1>
+
+    <div class="state-section">
+        <h2> Maharashtra</h2>
+        <ul>
+            <li><strong>Lonavala & Khandala</strong> – Scenic viewpoints, waterfalls & historic forts</li>
+            <li><strong>Mahabaleshwar</strong> – Strawberry farms, Pratapgad Fort & Arthur’s Seat</li>
+            <li><strong>Matheran</strong> – Eco-friendly hill station with toy train & lush greenery</li>
+            <li><strong>Panchgani</strong> – Table Land plateau, colonial charm & strawberry farms</li>
+        </ul>
+    </div>
+
+    <div class="state-section">
+        <h2> Himachal Pradesh</h2>
+        <ul>
+            <li><strong>Shimla</strong> – Colonial charm, Mall Road & scenic toy train</li>
+            <li><strong>Manali</strong> – Snow-capped peaks, Solang Valley & adventure sports</li>
+            <li><strong>Dalhousie</strong> – Pine valleys, Victorian architecture & Khajjiar (Mini Switzerland)</li>
+            <li><strong>Dharamshala & McLeod Ganj</strong> – Tibetan culture, monasteries & Dhauladhar views</li>
+        </ul>
+    </div>
+
+    <div class="state-section">
+        <h2> Uttarakhand</h2>
+        <ul>
+            <li><strong>Nainital</strong> – Naini Lake, Snow View Point & Mall Road</li>
+            <li><strong>Mussoorie</strong> – Waterfalls, cable car rides & “Queen of the Hills”</li>
+            <li><strong>Auli</strong> – India’s top skiing destination & panoramic Himalayan views</li>
+            <li><strong>Ranikhet</strong> – Peaceful meadows, golf courses & temple trails</li>
+        </ul>
+    </div>
+
+    <div class="state-section">
+        <h2>Kerala</h2>
+        <ul>
+            <li><strong>Munnar</strong> – Tea gardens, Eravikulam National Park & misty hills</li>
+            <li><strong>Wayanad</strong> – Waterfalls, wildlife sanctuaries & spice plantations</li>
+            <li><strong>Thekkady</strong> – Periyar Wildlife Sanctuary & boating experiences</li>
+            <li><strong>Ponmudi</strong> – Winding roads, misty peaks & trekking trails</li>
+        </ul>
+    </div>
+    </section>
+    <div id="contact-div">
+        <h1>Contact Us</h1>
+        <section class="contact-section" id="contact">
+            <form action="#" method="POST">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+        
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+        
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+        
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
