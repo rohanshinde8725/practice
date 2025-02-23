@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip</title>
+    <style>
+        body {
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        #container {
+            height: 580px;
+            width: 450px;
+            position: relative;
+            left: 35%;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        #container h1 {
+            text-align: center;
+            font-size: 30px;
+            font-family: Arial, sans-serif;
+        }
+        .form {
+            height: 30px;
+            width: 99%;
+            border: none;
+            border-bottom: 2px solid black;
+            margin: 10px 0;
+            font-size: 17px;
+        }
+        select, button {
+            width: 99%;
+            height: 40px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        button {
+            background-color: lightgreen;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="tripForm" onsubmit="return checkForm()">
+        <div id="container">
+            <h1>Book Your Trip</h1>
+
+            <input class="form" type="text" id="name" placeholder="Enter Your Name">
+            <input class="form" type="email" id="email" placeholder="Enter Email">
+            <input class="form" type="tel" id="phone" placeholder="Enter Your Phone Number">
+            <input class="form" type="number" id="travelers" min="1" placeholder="Number Of Travelers">
+            <input class="form" type="text" id="destination" placeholder="Enter Your Destination">
+
+            <label for="departure">Departure Date:</label>
+            <input class="form" type="date" id="departure">
+
+            <label for="returns">Return Date:</label>
+            <input class="form" type="date" id="returns">
+
+            <select id="package">
+                <option value="">Select a Package</option>
+                <option value="standard">Standard</option>
+                <option value="luxury">Luxury</option>
+                <option value="adventure">Adventure</option>
+                <option value="family">Family</option>
+            </select>
+
+            <button type="submit">Submit Booking</button>
+        </div>
+    </form>
+
+    <script>
+        function checkForm() {
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var departure = document.getElementById('departure').value;
+            var returns = document.getElementById('returns').value;
+            var package = document.getElementById('package').value;
+
+            if (name === "") {
+                alert("Please enter your name.");
+                return false;
+            }
+
+            if (email === "" || email.indexOf("@") === -1) {
+                alert("Please enter a valid email.");
+                return false;
+            }
+
+            if (phone.length !== 10 || isNaN(phone)) {
+                alert("Please enter a 10-digit phone number.");
+                return false;
+            }
+
+            if (departure === "") {
+                alert("Please select a departure date.");
+                return false;
+            }
+
+
+            if (returns === "") {
+                alert("Please select a return date.");
+                return false;
+            }
+
+            if (new Date(returns) < new Date(departure)) {
+                alert("Return date can't be before departure date.");
+                return false;
+            }
+
+            if (package === "") {
+                alert("Please select a package.");
+                return false;
+            }
+
+            alert("Trip booked successfully!");
+            document.getElementById('tripForm').reset(); 
+            return false; 
+        }
+    </script>
+
+</body>
+</html>
