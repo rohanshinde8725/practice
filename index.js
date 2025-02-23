@@ -11,3 +11,15 @@ btn.addEventListener("click", function(){
     }   
 })
 
+fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')
+.then(response => response.json())
+.then(data => {
+    const packageList = document.getElementById('package-list');
+    
+    data.forEach(post => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${post.title}`;
+        packageList.appendChild(listItem);
+    });
+})
+.catch(error => console.error('Error fetching data:', error));
